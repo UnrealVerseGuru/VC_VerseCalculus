@@ -1,2 +1,2 @@
 # VC_VerseCalculus
-Notes &amp; learnings from: The Verse Calculus: a Core Calculus for Functional Logic Programming (paper by EpicGames)
+Notes from: The Verse Calculus: a Core Calculus for Functional Logic Programming (paper by EpicGames)
