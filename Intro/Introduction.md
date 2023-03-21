@@ -93,6 +93,9 @@ A reduction strategy (also called evaluation order) is a strategy for choosing r
 
 
 <!-- 
-    in VC every variable is a function, we use $\lambda$ to define a function just as in LC which is called Lambda Abstraction
+ -   in VC every variable is a function, we use $\lambda$ to define a function just as in LC which is called Lambda Abstraction
+- Strict VS LAZY: in a lazy model unused terms can be ignored, and in a strict model they must be evaluated to make sure they don’t loop forever.  lazy languages are the same as strict except that it’s okay to have an infinite loop if the result is unused
+- thunk: A "thunk" is a term used in computer programming to refer to a small piece of code that is used to defer the evaluation of an expression. In other words, a thunk is a function that doesn't take any arguments, but instead returns a value when called.
+Thunks are often used in functional programming languages like Haskell and Lisp, where lazy evaluation is a common technique. By using a thunk, a programmer can delay the computation of an expression until it is actually needed, which can improve performance in some cases. 
 
 # ![RewriteRules](LINK "Rewrite application example from Haskell")
