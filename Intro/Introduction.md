@@ -48,9 +48,9 @@ A reduction strategy (also called evaluation order) is a strategy for choosing r
     * If normal form exists, then it is unique (i.e., result of computation does not depend on the order that reductions are applied; i.e., no expression can have two distinct normal forms)
     * If normal form exists, then normal order will find it
   
-  ----------------------
+ ----------------------
  
-  </details>
+ </details>
 
 **2. Core syntax & tenets**
 
