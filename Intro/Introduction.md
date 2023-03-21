@@ -35,7 +35,29 @@ Well make shortcuts and focus on findings from VC helping us understanding VPL i
 - know **Lambda Calculus**. _Every VC term is Lambda Calculus term and has the same semantics._ <sub>Quote from paper</sub>
 - know atleast general info atou Haskell, Prolog, especially differences. Verse being functional logic language shares many concepts of similar languages, and there is abundance of terms from other ones. Knowing them atleast briefly will save you a lot of headaches.
 
+<details>
+
+***<summary>few Lambda Calculus tenets</summary>***
+  
+An expression $\lambda (x.E) M$ is called a **redex** (for reducible expression)
+  
+A reduction strategy (also called evaluation order) is a strategy for choosing redexes:
+  * ***Applicative order reduction*** (**call-by-value**) **Strict evaluation strategy** is an eager evaluation strategy: chooses the ***leftmost-innermost*** redex in an expression
+  * ***Normal order reduction*** (**call-by-name**) **lazy evaluation strategy** - chooses the ***leftmost-outermost*** redex in an expression
+  * **Church-Rosser Theorem**: Normal form implies that there are no more reductions possible (since that arriving at same result using both strategies not always the case)
+    * If normal form exists, then it is unique (i.e., result of computation does not depend on the order that reductions are applied; i.e., no expression can have two distinct normal forms)
+    * If normal form exists, then normal order will find it
+  
+  ----------------------
+ 
+  </details>
+
 **2. Core syntax & tenets**
+
+1. Pay attention to spacing. Very important in Lambda Calculus & VC as parentheses _()_ are often optional or used to force evaluation in different way
+2. Desugaring simply means simplifying Verse code with use of VC
+3. We use the symbol “≡” to indicate that when A ≡ B, A is just a synonym of B.
+4. Form: **Fig 1.** will concern images copied from the paper
 
 ![RewriteRules](https://github.com/UnrealVerseGuru/VC_VerseCalculus/blob/GeneralNotes/Intro/ImageRefs/VC_AbstractSyntax1.png "Rewrite application example from Haskell")
 #### Values _v_
@@ -45,11 +67,30 @@ Well make shortcuts and focus on findings from VC helping us understanding VPL i
     *  operator _op_ integers operators **gt** and **add**
     *  tuple (a pair). Very important in VC, those are data constructors
     *  lambda $\lambda$ (from Lambda Calculus: symbol indicating starting of definition of a function)
-  
 
-#### Expressions
+#### Expressions _e_
+  * values _v_
+  * application $v_1 v_2$
+    * For clarity often $v_1 (v_2)$ used when $v_2$ is not a tuple
+    * formal syntax for e allows only applications of _values_, $v_1 (v_2)$, but the desugaring rules show how to desugar more applications $e_1 (e_2)$
 
-  * 
+#### Term _eq_
+  * Ordinary expression _e_
+  * equation _v=e_
+    * equations can only occur to the left of ";"
+
+#### Logical variables and equations that constrain their values
+  * to bring a fresh logical variable into scope use ∃
+  * to constrain a value to be equal to an expression with an equation use $v=e$
+  * to compose expressions in sequence use $𝑒𝑞; e$
+  * **Equation:** syntax carefully constrains both the form of equations and where they can appear: an equation $(v=e)$ always equates a value 𝑣 to an expression 𝑒; and an equation can only appear to the left of a “;”
+    *  The desugaring rules in Fig. 1 rewrite a general equation $e1=e2$ into this simpler form
+
+#### _program_ _p_
+  * contains closed expression from which result gets extracted using **one**, unless the expression fails, in which case the program fails
+  * A program executes by solving its equations, using the process of unification
+
+
 
 <!-- 
     in VC every variable is a function, we use $\lambda$ to define a function just as in LC which is called Lambda Abstraction
