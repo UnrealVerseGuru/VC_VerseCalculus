@@ -18,7 +18,10 @@ x = (2,y:int);
   x
   ```
   You have bunch of Verse code, some instructions which might give you some value, so what to do next ? How to evaluate it's result ?
-  This is where VC with it's **rewrite rules** steps in. In math you've learned, you'de have to apply some rules to equation to solve it. There were also some concepts like precedence (firtst multiplication, then addition) and other ideas. This is what this paper mainly tries to do: define **rewrite** rules using simpler, more low level language: VC, which You will apply to Verse program to solve the equation. Paper will give us strategies on when to use certain rewrite rules and those will guide us how to simplify Verse program with VC, eventually solving it.
+  This is where VC with it's **rewrite rules** steps in. In math you've learned, you'de have to apply some rules to equation to solve it. There were also some concepts like precedence (firtst multiplication, then addition) and other ideas. This is what this paper mainly tries to do: define **rewrite** rules using simpler, more low level language: VC, which You will apply to Verse program to solve the equation. \
+![RewriteRules](https://github.com/UnrealVerseGuru/VC_VerseCalculus/blob/GeneralNotes/Intro/ImageRefs/VC_VerseCalculus_RewriteRulesExmpl.png "Rewrite application example from Haskell")
+  
+  Paper will give us strategies on when to use certain rewrite rules and those will guide us how to simplify Verse program with VC, eventually solving it. Mentioned later **Confluence** is well illustrated in above example: it's property of rewriting system, describing which terms can be rewritten in more than one way, to yield the same result.
   
 --------------------
   
@@ -33,3 +36,4 @@ Well make shortcuts and focus on findings from VC helping us understanding VPL i
 - know atleast general info atou Haskell, Prolog, especially differences. Verse being functional logic language shares many concepts of similar languages, and there is abundance of terms from other ones. Knowing them atleast briefly will save you a lot of headaches.
 
 **2. Core syntax**
+
