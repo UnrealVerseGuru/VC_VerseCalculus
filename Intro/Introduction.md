@@ -85,11 +85,14 @@ A reduction strategy (also called evaluation order) is a strategy for choosing r
   * to compose expressions in sequence use $𝑒𝑞; e$
   * **Equation:** syntax carefully constrains both the form of equations and where they can appear: an equation $(v=e)$ always equates a value 𝑣 to an expression 𝑒; and an equation can only appear to the left of a “;”
     *  The desugaring rules in Fig. 1 rewrite a general equation $e1=e2$ into this simpler form
+  * logical variables are not mutable, it stands for single immutable value 
 
 #### _program_ _p_
   * contains closed expression from which result gets extracted using **one**, unless the expression fails, in which case the program fails
   * A program executes by solving its equations, using the process of unification
 
+**Pattern Matching**
+VC uses unification (instead of **case** expressions for PM): $first :=𝜆p. ∃ab. p = ⟨a, b⟩; a$
 
 
 <!-- 
