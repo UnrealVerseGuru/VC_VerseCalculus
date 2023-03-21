@@ -37,3 +37,7 @@ Well make shortcuts and focus on findings from VC helping us understanding VPL i
 
 **2. Core syntax**
 
+![RewriteRules](https://github.com/UnrealVerseGuru/VC_VerseCalculus/blob/GeneralNotes/Intro/ImageRefs/VC_AbstractSyntax1.png "Rewrite application example from Haskell")
+
+<!-- 
+# ![RewriteRules](LINK "Rewrite application example from Haskell")
