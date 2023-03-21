@@ -35,9 +35,23 @@ Well make shortcuts and focus on findings from VC helping us understanding VPL i
 - know **Lambda Calculus**. _Every VC term is Lambda Calculus term and has the same semantics._ <sub>Quote from paper</sub>
 - know atleast general info atou Haskell, Prolog, especially differences. Verse being functional logic language shares many concepts of similar languages, and there is abundance of terms from other ones. Knowing them atleast briefly will save you a lot of headaches.
 
-**2. Core syntax**
+**2. Core syntax & tenets**
 
 ![RewriteRules](https://github.com/UnrealVerseGuru/VC_VerseCalculus/blob/GeneralNotes/Intro/ImageRefs/VC_AbstractSyntax1.png "Rewrite application example from Haskell")
+#### Values _v_
+  * either variable _x_
+  * or head-normal form: _hnf_ which is either conventional value:
+    *  built-in integer constant _k_. Integer is number that can be positive, negative, or zero, and is not a fraction or a decimal e.g. _12345_, _999_, _0_
+    *  operator _op_ integers operators **gt** and **add**
+    *  tuple (a pair). Very important in VC, those are data constructors
+    *  lambda $\lambda$ (from Lambda Calculus: symbol indicating starting of definition of a function)
+  
+
+#### Expressions
+
+  * 
 
 <!-- 
+    in VC every variable is a function, we use $\lambda$ to define a function just as in LC which is called Lambda Abstraction
+
 # ![RewriteRules](LINK "Rewrite application example from Haskell")
